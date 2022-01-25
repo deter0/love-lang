@@ -1,17 +1,2 @@
-void exit() {
-	__mov(__rax, 60);
-	__mov(__rdi, 0);
-	__syscall();
-}
-
-void main() {
-	__mov(__rax, 1);
-	__mov(__rdi, 1);
-	__mov(__rsi, msg);
-	__mov(__rdx, #msg);
-	__syscall();
-	
-	exit();
-}
-
-string msg = "Hello World";
+string msg = "Hello";
+string msg_ = "Bye";
