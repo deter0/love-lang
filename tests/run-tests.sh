@@ -11,7 +11,7 @@ for TEST_FILE in "${TESTS[@]}"; do
 	bin/love tests/$TEST_FILE
 	nasm -f elf64 out.asm
 	ld -o out out.o
-	rm out.asm
+	mv out.asm tests/$TEST_FILE.asm
 	rm out.o
 	mv out tests/hello-world-love-bin
 	echo "Running ./out ..."
